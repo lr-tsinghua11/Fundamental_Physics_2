@@ -1,0 +1,135 @@
+%# -*- coding: utf-8-unix -*-
+
+\chapter{量子物理}
+\label{chap3}
+\section{康普顿散射}
+\begin{myprop}{康普顿散射公式}{1}
+	 康普顿散射是指当X射线或伽马射线的光子跟物质相互作用，因失去能量而导致波长变长的现象，其波长变化量公式如下
+	\[
+		\lambda_f-\lambda_i=\frac{h}{m_e c}(1-\cos \theta)	
+	\]
+\end{myprop}
+\begin{proof}
+	其中$\underrightarrow{P}$表示四维动量, $i/f$代表initial/final, $\theta$ 是光子偏转角$\left( \text{能、动量守恒也能做} \right)$ 
+	\[
+		\begin{gathered}
+		\underrightarrow{P_{\gamma i}}+\underrightarrow{P_{ei}}=\underrightarrow{P_{\gamma f}}+\underrightarrow{P_{ef}}\,\,   \Rightarrow \,\,   \underrightarrow{P_{\gamma i}}+\underrightarrow{P_{ei}}-\underrightarrow{P_{\gamma f}}=\underrightarrow{P_{ef}}\,\,   \Rightarrow \,\,   (\underrightarrow{P_{\gamma i}}+\underrightarrow{P_{ei}}-\underrightarrow{P_{\gamma f}})^2=(\underrightarrow{P_{ef}})^2
+		\\
+		\Rightarrow \,\,   0+\left( -m_ec^2 \right) +0+2\left( -\underrightarrow{P_{\gamma i}}\cdot \underrightarrow{P_{\gamma f}}+\underrightarrow{P_{ei}}\cdot \left( \underrightarrow{P_{\gamma i}}-\underrightarrow{P_{\gamma f}} \right) \right) =-m_ec^2
+		\\
+		\Rightarrow \,\,   \underrightarrow{P_{\gamma i}}\cdot \underrightarrow{P_{\gamma f}}=\underrightarrow{P_{ei}}\cdot \left( \underrightarrow{P_{\gamma i}}-\underrightarrow{P_{\gamma f}} \right) \,\,  \Rightarrow \,\,   \frac{h^2}{\lambda _i\lambda _f}\left( \cos \theta -1 \right) =-m_ec\left( \frac{h}{\lambda _i}-\frac{h}{\lambda _f} \right) 	
+		\end{gathered}
+	\]	
+\end{proof}
+
+
+
+\section{普朗克黑体辐射}
+\[
+	\left. \begin{array}{c}
+		\text{瑞丽}-\text{金斯公式(长波)}: \dfrac{8\pi \nu ^2}{c^3}k_BT\\
+		\text{维恩公式(短波)}: \dfrac{8\pi \nu ^2}{c^3}\cdot \dfrac{h\nu}{e^{h\nu /k_BT}}\\
+	\end{array} \right\} \xRightarrow[\text{爱因斯坦受激辐射理论}]{\text{普朗克凑出}}\text{普朗克公式}:\frac{8\pi \nu ^2}{c^3}\cdot \frac{h\nu}{e^{h\nu /k_BT}-1}\,\,	
+\]
+
+
+\section{波函数、算符和对易性}
+
+\begin{mydef}{波函数统计解释和归一性}{1}
+	\[
+		|\varPsi (\vec{r},t)|^2=\varPsi ^*(\vec{r},t)\times \varPsi (\vec{r},t)\text{代表}t\text{时刻}, \vec{r}\text{附近的概率密度。}	
+	\]
+	\[
+		\text{概率的归一性}: 1=\int_{\text{全空间}}{dP}=\int_{\text{全空间}}{|\varPsi (\vec{r},t)|^2dP}
+	\]
+\end{mydef}
+
+\begin{mydef}{算符的引入}{1}
+	\[
+		\text{对自由粒子}
+		\begin{cases}
+		 \varPsi (\vec{r},t)=\varPsi _0e^{i\left( \vec{k}\cdot \vec{r}-\omega t \right)}\xlongequal{\text{代入}\vec{p}=\hbar \vec{k},E=\hbar \omega}\varPsi _0e^{-\frac{i}{\hbar}(Et-\vec{p}\cdot \vec{r})}\\
+		-i\hbar \dfrac{\partial}{\partial x}\,\,\varPsi (\vec{r},t)=-i\hbar \varPsi _0e^{-\frac{i}{\hbar}(Et-\vec{p}\cdot \vec{r})}\frac{\partial}{\partial x}\left( -\dfrac{i}{\hbar}(Et-\vec{p}\cdot \vec{r}) \right) =p_x\varPsi (\vec{r},t)
+		\end{cases}
+	\]
+	\[
+		\text{因此，我们把}-i\hbar \frac{\partial}{\partial x}\text{称作}x\text{方向的动量算符，记作}\hat{p}_x=-i\hbar \frac{\partial}{\partial x}	
+	\]
+	\[
+		\text{同样的，我们有}\boldsymbol{\hat{p}}=\left[ \begin{array}{c}
+			\hat{p}_x\\
+			\hat{p}_y\\
+			\hat{p}_z\\
+		\end{array} \right] =\left[ \begin{array}{c}
+			-i\hbar \dfrac{\partial}{\partial x}\\
+			-i\hbar \dfrac{\partial}{\partial y}\\
+			-i\hbar \dfrac{\partial}{\partial z}\\
+		\end{array} \right] =-i\hbar \nabla    \text{称作动量算符}	
+	\]
+\end{mydef}
+\par 需要指出的是，虽然我们选择从自由粒子导出，但这些算符对于不同的波函数是普适的。对于其它的算符，下面给出一些例子
+\begin{example}
+尝试给出非相对论动能算符、坐标表象下的系统总能量算符、轨道角动量算符、轨道角动量平方算符。
+\soln
+
+	\[
+		\\
+	\]
+	\[
+		\\
+	\]
+	\[
+		\\
+	\]
+	\[
+		\\
+	\]
+	% \[
+	% 	\text{非相对论动能算符}\hat{T}=-\frac{\boldsymbol{\hat{p}}^2}{2m}=-\frac{\hbar ^2}{2m}\vec{\nabla}^2\,\,   
+	% \]
+	% \[
+	% 	\text{坐标表象下的系统总能量算符}\hat{H}=\hat{T}+\hat{V}(\boldsymbol{r})
+	% \]
+	% \[
+	% \text{角动量算符}\boldsymbol{\hat{l}}=\boldsymbol{\hat{r}}\times \boldsymbol{\hat{p}}=\left[ \begin{array}{c}
+	% -i\hbar \left( y\dfrac{\partial}{\partial z}-z\dfrac{\partial}{\partial y} \right)\\
+	% -i\hbar \left( z\dfrac{\partial}{\partial x}-x\dfrac{\partial}{\partial z} \right)\\
+	% -i\hbar \left( x\dfrac{\partial}{\partial y}-y\dfrac{\partial}{\partial x} \right)\\
+	% \end{array} \right] =\left[ \begin{array}{c}
+	% i\hbar \left( \sin \varphi \dfrac{\partial}{\partial \theta}+\cot \theta \cos \varphi \dfrac{\partial}{\partial \varphi} \right)\\
+	% i\hbar \left( -\cos \varphi \dfrac{\partial}{\partial \theta}+\cot \theta \sin \varphi \dfrac{\partial}{\partial \varphi} \right)\\
+	% -i\hbar \dfrac{\partial}{\partial \varphi}
+	% \end{array} \right] 
+	% \]
+	% \[
+	% \text{角动量平方算符} \boldsymbol{\hat{l}}^2\equiv \boldsymbol{\hat{l}}_{x}^{2}+\boldsymbol{\hat{l}}_{y}^{2}+\boldsymbol{\hat{l}}_{z}^{2}=\left( \boldsymbol{\hat{p}}^2-\boldsymbol{\hat{p}}_{r}^{2} \right) \boldsymbol{\hat{r}}^2=-\hbar ^2\left[ \frac{1}{\sin \theta}\frac{\partial}{\partial \theta}\left( \sin \theta \frac{\partial}{\partial \theta} \right) +\frac{1}{\sin ^2\theta}\frac{\partial ^2}{\partial \varphi ^2} \right] 
+	% \]
+\end{example}
+\begin{mydef}{算符性质}{1}
+	\begin{itemize}
+		\item 标量 $A$ 与 $B: A B=B A$
+		\item 矢量 $\vec{A}$ 与 $\vec{B}: \vec{A} \cdot \vec{B}=\vec{B} \cdot \vec{A} \quad \vec{A} \times \vec{B}=-\vec{B} \times \vec{A}$
+		\item 算符 $\hat{p}$ 与 $\hat{x}$的关系
+		\[
+			\hat{p}_x[x \psi(x)]=-i \hbar \frac{\partial}{\partial x}[x \psi(x)]=-i \hbar \psi(x)-i \hbar x \frac{\partial}{\partial x} \psi(x)=-i \hbar \psi(x)+x \hat{p}_x \psi(x)
+		\]
+		由于波函数 $\psi(x)$ 任意，可以略去不写，记作 $\hat{p}_x \hat{x}=-i \hbar+\hat{x} \hat{x}_x \Leftrightarrow \hat{p}_x \hat{x}-\hat{x} \hat{p}_x=-i \hbar$ 我们将用 $\left[\hat{p}_x，\hat{x}\right]$ 来表示 $\hat{p}_x \hat{x}-\hat{x} \hat{p}_x$，则对易关系表示为: $\left[\hat{p}_x, \hat{x}\right]=-i \hbar$。
+	\end{itemize}
+\end{mydef}
+
+\begin{mythm}{不确定关系}{1}
+	理论上可以证明，若用 $\sigma_A$ 表达物理量 $A$ 的标准差，$\hat{A}$ 表示 $A$ 对应的算符，则有
+	\[
+		\sigma_A \sigma_B \geqslant\left|\frac{\langle[\hat{A}, \hat{B}]\rangle}{2 i}\right|
+	\]
+\end{mythm}
+\begin{example}
+	取 $A, B$ 为 $p_x, x$，代入定理3.6推导测不准原理。
+	\soln 
+
+	\[
+		\\
+	\]
+	% \par则 $\left[\hat{p}_x，\hat{x}\right]=-i \hbar$ 是我们已知的结果, 代入上式得到 $\sigma_{p_x} \sigma_x \geqslant\left|\dfrac{-i \hbar}{2 i}\right|=\dfrac{\hbar}{2}$
+	% \par 这就是我们熟悉的 $p_x, x$ 的不确定性关系。
+\end{example}

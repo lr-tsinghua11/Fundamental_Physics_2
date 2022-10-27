@@ -1,0 +1,56 @@
+%# -*- coding: utf-8-unix -*-
+\thispagestyle{empty}
+\begin{tikzpicture}[overlay,remember picture,font=\sffamily\bfseries]
+\draw[ultra thick,c4,name path=big arc] ([xshift=-2mm]current page.north) arc(150:285:11)
+coordinate[pos=0.225] (x0);
+\begin{scope}
+\clip ([xshift=-2mm]current page.north) arc(150:285:11) --(current page.north
+east);
+\fill[c4!50,opacity=0.25] ([xshift=4.55cm]x0) circle (4.55);
+\fill[c4!50,opacity=0.25] ([xshift=3.4cm]x0) circle (3.4);
+\fill[c4!50,opacity=0.25] ([xshift=2.25cm]x0) circle (2.25);
+\draw[ultra thick,c4!50] (x0) arc(-90:30:6.5);
+\draw[ultra thick,c4] (x0) arc(90:-30:8.75);
+\draw[ultra thick,c4!50,name path=arc1] (x0) arc(90:-90:4.675);
+\draw[ultra thick,c4!50] (x0) arc(90:-90:2.875);
+\path[name intersections={of=big arc and arc1,by=x1}];
+\draw[ultra thick,c4,name path=arc2] (x1) arc(135:-20:4.75);
+\draw[ultra thick,c4!50] (x1) arc(135:-20:8.75);
+\path[name intersections={of=big arc and arc2,by={aux,x2}}];
+\draw[ultra thick,c4!50] (x2) arc(180:50:2.25);
+\end{scope} 
+\path[decoration={text along path,text color=c4,
+	raise = -2.8ex,
+	text  along path,
+	text = {|\sffamily\bfseries|\today},
+	text align = center,
+},
+decorate
+] ([xshift=-2mm]current page.north) arc(150:245:11);
+%
+\begin{scope}
+\path[clip,postaction={fill=c3}]
+([xshift=2cm,yshift=-13cm]current page.center) rectangle ++ (4.2,7.7);
+\fill[c2] ([xshift=0.5cm,yshift=-8cm]current page.center)
+([xshift=0.5cm,yshift=-8cm]current page.center)  arc(180:60:2)
+|- ++ (-3,6) --cycle;
+\draw[ultra thick,c4] ([xshift=-1.5cm,yshift=-11.5cm]current page.center) 
+arc(180:0:2);
+\draw[ultra thick,c4] ([xshift=0.5cm,yshift=-11.5cm]current page.center) 
+arc(180:0:2);
+\draw[ultra thick,c4] ([xshift=2.5cm,yshift=-11.5cm]current page.center) 
+arc(180:0:2);
+\draw[ultra thick,c4] ([xshift=4.5cm,yshift=-11.5cm]current page.center) 
+arc(180:0:2);
+\node[text=c5!80!black] at ([xshift=4cm,yshift=-8.5cm]current page.center) {$\dfrac{1}{R}+\dfrac{1}{b}=\dfrac{k\lambda}{\rho^2}$};
+\end{scope}
+%
+\fill[c1] ([xshift=2cm,yshift=-13cm]current page.center) rectangle ++ (-13.7,7.7);
+\node[text=white,anchor=west,scale=2.2,inner sep=0pt] at
+([xshift=-9.8cm,yshift=-7.5cm]current page.center) { 基础物理学$\mathbf{ 2 }$ 半期辅导讲义};
+\node[text=white,anchor=west,scale=1,inner sep=0pt] at
+([xshift=-5.8cm,yshift=-10.5cm]current page.center) {作者：未央书院\ \ 鲁睿\ 潘佳铭\ 解奕扬\ };
+\node[text=white,anchor=west,scale=1,inner sep=0pt] at
+([xshift=-1.95cm,yshift=-11.5cm]current page.center) {指导教师\ 陈少敏};
+
+\end{tikzpicture}

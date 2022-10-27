@@ -1,0 +1,65 @@
+%# -*- coding: utf-8-unix -*-
+%%==================================================
+\chapter{几何光学}
+
+
+
+
+
+\section{临界光线}
+
+\begin{myprop}{ 最小偏向角}{}
+	当一束光在顶角为$\alpha$、折射率为$n$的三棱镜中发生两次折射时，其偏向角有极小值，当入射角和出射角相等时取极小值，最小偏向角满足的方程如下
+    \[
+        n\sin\left(\dfrac{A}{2}\right)=\sin\left(\dfrac{\delta_{\min}+A}{2}\right)
+    \]
+\end{myprop}
+该性质的一个直观想法是，由于\textbf{光路可逆原理}，对称角附近偏离相同角度时互为可逆光，总偏向角不变，故为极值，至于是极大值还是极小值需要计算二阶导数。
+\begin{proof}
+    设第一次折射对应的入射角和出射角分别为$i_1,r_1$，第二次折射对应的入射角和出射角分别为$i_2,r_2$，有几何关系$\dfrac{\pi}{2}-r_1+\dfrac
+    {\pi}{2}-i_2+A=\pi$，总偏折角度
+    \[
+        \Delta = i_1-r_1+r_2-i_2=i_1+r_2-A
+    \]
+    由折射定律关系$\sin i_1=n\sin r_1,n\sin i_2=\sin r_2$，将总偏折角度代换为$r_1$的函数
+    \[
+        \Delta(r_1)=\arcsin(n\sin r_1)+\arcsin(n\sin (A-r_1))-A    
+    \]
+    上述函数关系具有对称性$\Delta(r_1)=\Delta(A-r_1)$，在$r_1=\dfrac{A}{2}$处求二阶导
+    \[
+        % \( \left.\frac{x}{y}\right|_{x=1} \)
+        \left.\dfrac{\mathrm{d}^2\Delta}{\mathrm{d}r_1^2}\right|_{r_1=\frac{A}{2}}=\frac{n \left(n^2-1\right) \sin r_1}{\left(1-n^2 \sin ^2 r_1\right)^{3/2}}+\frac{n \left(n^2-1\right) \sin (A-r_1)}{\left(1-n^2 \sin ^2 (A-r_1)\right)^{3/2}}=\frac{2n \left(n^2-1\right) \sin \dfrac{A}{2}}{\left(1-n^2 \sin ^2 \dfrac{A}{2}\right)^{3/2}}>0
+    \]
+    从而对应极小值，代表最小偏向角。
+\end{proof}
+
+\begin{myprop}{ 掠入射}{}
+	光从折射率为$n_1$的介质均匀地射入折射率为$n_2$的介质时（$n_1<n_2$），出射临界角
+    \[
+        \theta_{c}=\arcsin\left(\dfrac{n_1}{n_2}\right)
+    \]
+\end{myprop}
+由折射定律以及$\sin i_1\leq 1$易证。
+\section{光学仪器}
+
+\begin{myprop}{ 显微镜}{}
+	设显微镜的光学筒长$\Delta=d-f_{O}-f_{E}$，人眼明视距离为$s_{0}(\approx \SI{25}{\cm})$，物镜和目镜的焦距为$f_{O}$和$f_{E}$，其角放大率为
+    \[
+        M=\dfrac{\Delta s_0}{f_{O}f_{E}}
+    \]
+\end{myprop}
+证明中约定物体成像在明视距离，并使用凸透镜的牛顿公式进行化简。
+
+
+\begin{myprop}{ 望远镜}{}
+    设望远镜的物镜和目镜的焦距为$f_{O}$和$f_{E}
+    $，则角放大率为
+    \[
+        M=\dfrac{f_{O}}{f_{E}}    
+    \]
+\end{myprop}
+\begin{proof}
+    使用凸透镜焦平面的特性，当平行光入射至凸透镜时（可以倾斜），其汇聚于焦平面上的一点（即\textbf{焦平面上的点共轭于无穷远}），设汇聚点距离光轴为$d$，则视场角度和原始角度之比为放大率$M=\dfrac{d/f_{E}}{d/f_{E}}=\dfrac{f_{O}}{f_{E}}$。   
+\end{proof}
+
+% \footnote{\url{https://github.com/sjtug/SJTUThesis}}。
