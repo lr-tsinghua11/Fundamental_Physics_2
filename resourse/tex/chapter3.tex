@@ -22,7 +22,15 @@
 	\]	
 \end{proof}
 
-
+\begin{remark}
+	应用康普顿散射公式和能量守恒，可以快速得到电子的动能和散射角度
+	\[
+		\begin{cases}
+			E_{k}=\dfrac{hc}{\lambda_0}-\dfrac{hc}{\lambda_0+\Delta\lambda}=\dfrac{\dfrac{h^2c^2}{m_e}(1-\cos \theta)}{\lambda_0(\lambda_0+\dfrac{hc}{m_e}(1-\cos \theta))}\\
+			\tan \varphi = \dfrac{\lambda_0}{\dfrac{hc}{m_e}+\lambda_0}\dfrac{\sin \theta}{1-\cos \theta}=\dfrac{\lambda_0}{\dfrac{hc}{m_e}+\lambda_0}\cot \left(\dfrac{\theta}{2}\right)
+		\end{cases}
+	\]
+\end{remark}
 
 \section{普朗克黑体辐射}
 \[
@@ -72,38 +80,38 @@
 尝试给出非相对论动能算符、坐标表象下的系统总能量算符、轨道角动量算符、轨道角动量平方算符。
 \soln
 
-	\[
-		\\
-	\]
-	\[
-		\\
-	\]
-	\[
-		\\
-	\]
-	\[
-		\\
-	\]
 	% \[
-	% 	\text{非相对论动能算符}\hat{T}=-\frac{\boldsymbol{\hat{p}}^2}{2m}=-\frac{\hbar ^2}{2m}\vec{\nabla}^2\,\,   
+	% 	\\
 	% \]
 	% \[
-	% 	\text{坐标表象下的系统总能量算符}\hat{H}=\hat{T}+\hat{V}(\boldsymbol{r})
+	% 	\\
 	% \]
 	% \[
-	% \text{角动量算符}\boldsymbol{\hat{l}}=\boldsymbol{\hat{r}}\times \boldsymbol{\hat{p}}=\left[ \begin{array}{c}
-	% -i\hbar \left( y\dfrac{\partial}{\partial z}-z\dfrac{\partial}{\partial y} \right)\\
-	% -i\hbar \left( z\dfrac{\partial}{\partial x}-x\dfrac{\partial}{\partial z} \right)\\
-	% -i\hbar \left( x\dfrac{\partial}{\partial y}-y\dfrac{\partial}{\partial x} \right)\\
-	% \end{array} \right] =\left[ \begin{array}{c}
-	% i\hbar \left( \sin \varphi \dfrac{\partial}{\partial \theta}+\cot \theta \cos \varphi \dfrac{\partial}{\partial \varphi} \right)\\
-	% i\hbar \left( -\cos \varphi \dfrac{\partial}{\partial \theta}+\cot \theta \sin \varphi \dfrac{\partial}{\partial \varphi} \right)\\
-	% -i\hbar \dfrac{\partial}{\partial \varphi}
-	% \end{array} \right] 
+	% 	\\
 	% \]
 	% \[
-	% \text{角动量平方算符} \boldsymbol{\hat{l}}^2\equiv \boldsymbol{\hat{l}}_{x}^{2}+\boldsymbol{\hat{l}}_{y}^{2}+\boldsymbol{\hat{l}}_{z}^{2}=\left( \boldsymbol{\hat{p}}^2-\boldsymbol{\hat{p}}_{r}^{2} \right) \boldsymbol{\hat{r}}^2=-\hbar ^2\left[ \frac{1}{\sin \theta}\frac{\partial}{\partial \theta}\left( \sin \theta \frac{\partial}{\partial \theta} \right) +\frac{1}{\sin ^2\theta}\frac{\partial ^2}{\partial \varphi ^2} \right] 
+	% 	\\
 	% \]
+	\[
+		\text{非相对论动能算符}\hat{T}=-\frac{\boldsymbol{\hat{p}}^2}{2m}=-\frac{\hbar ^2}{2m}\vec{\nabla}^2\,\,   
+	\]
+	\[
+		\text{坐标表象下的系统总能量算符}\hat{H}=\hat{T}+\hat{V}(\boldsymbol{r})
+	\]
+	\[
+	\text{角动量算符}\boldsymbol{\hat{l}}=\boldsymbol{\hat{r}}\times \boldsymbol{\hat{p}}=\left[ \begin{array}{c}
+	-i\hbar \left( y\dfrac{\partial}{\partial z}-z\dfrac{\partial}{\partial y} \right)\\
+	-i\hbar \left( z\dfrac{\partial}{\partial x}-x\dfrac{\partial}{\partial z} \right)\\
+	-i\hbar \left( x\dfrac{\partial}{\partial y}-y\dfrac{\partial}{\partial x} \right)\\
+	\end{array} \right] =\left[ \begin{array}{c}
+	i\hbar \left( \sin \varphi \dfrac{\partial}{\partial \theta}+\cot \theta \cos \varphi \dfrac{\partial}{\partial \varphi} \right)\\
+	i\hbar \left( -\cos \varphi \dfrac{\partial}{\partial \theta}+\cot \theta \sin \varphi \dfrac{\partial}{\partial \varphi} \right)\\
+	-i\hbar \dfrac{\partial}{\partial \varphi}
+	\end{array} \right] 
+	\]
+	\[
+	\text{角动量平方算符} \boldsymbol{\hat{l}}^2\equiv \boldsymbol{\hat{l}}_{x}^{2}+\boldsymbol{\hat{l}}_{y}^{2}+\boldsymbol{\hat{l}}_{z}^{2}=\left( \boldsymbol{\hat{p}}^2-\boldsymbol{\hat{p}}_{r}^{2} \right) \boldsymbol{\hat{r}}^2=-\hbar ^2\left[ \frac{1}{\sin \theta}\frac{\partial}{\partial \theta}\left( \sin \theta \frac{\partial}{\partial \theta} \right) +\frac{1}{\sin ^2\theta}\frac{\partial ^2}{\partial \varphi ^2} \right] 
+	\]
 \end{example}
 \begin{mydef}{算符性质}{1}
 	\begin{itemize}
@@ -127,9 +135,8 @@
 	取 $A, B$ 为 $p_x, x$，代入定理3.6推导测不准原理。
 	\soln 
 
-	\[
-		\\
-	\]
-	% \par则 $\left[\hat{p}_x，\hat{x}\right]=-i \hbar$ 是我们已知的结果, 代入上式得到 $\sigma_{p_x} \sigma_x \geqslant\left|\dfrac{-i \hbar}{2 i}\right|=\dfrac{\hbar}{2}$
-	% \par 这就是我们熟悉的 $p_x, x$ 的不确定性关系。
+	\par 则 $\left[\hat{p}_x，\hat{x}\right]=-i \hbar$ 是我们已知的结果, 代入上式得到 $\sigma_{p_x} \sigma_x \geqslant\left|\dfrac{-i \hbar}{2 i}\right|=\dfrac{\hbar}{2}$，这就是我们熟悉的 $p_x, x$ 的不确定性关系。
+	% \[
+	% 	\\
+	% \]
 \end{example}

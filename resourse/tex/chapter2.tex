@@ -124,37 +124,37 @@
 	\[
 	\frac{1}{R}+\frac{1}{b}=\frac{k \lambda}{\rho_k^2}
 	\]
-	当物距 $R$, 像距 $b$ 时 $\left[\begin{array}{c}1 \text {. 通过 } \rho_k \text { 的光线 } \\ 2 \text {. 通过 } \rho_0=0 \text { 的光线(与光轴重合的光线) }\end{array}\right]$ 光程差为 $k \lambda$
+	当物距 $R$, 像距 $b$ 时 $\left[\begin{array}{c}1 \text {. 通过 } \rho_k \text { 的光线 } \\ 2 \text {. 通过 } \rho_0=0 \text { 的光线(与光轴重合的光线) }\end{array}\right]$ 光程差为 $\dfrac{k \lambda}{2}$
 \end{myprop}
 
 \begin{example}
 	单色平面光波波长 \qty{5000}{\angstrom}，正入射到如下图所示的衍射屏上，$r_1=\sqrt{2} \mathrm{~mm}$, $r_2=1 \mathrm{~mm}$，轴上观察点离衍射屏 $2 \mathrm{~m}$，计算观察点处的振幅和强度 (用$A_0$和$I_{0}$ 表示) 。
 	\soln
 
-	\[
-		\\
-	\]
-	\[
-		\\
-	\]
+	% \[
+	% 	\\
+	% \]
+	% \[
+	% 	\\
+	% \]
 	
-	% \par 由波带片计算相应的半波带数目
-	% \[
-	% 	k_{i}=\dfrac{\rho_i^2(R+b)}{Rb}=2,1	
-	% \]
-	% \par 图中相当于一个完整$k\in[0,1]$半波带和$\dfrac{1}{4}$个$k\in[1,2]$半波带，绘制相应矢量振幅图如下，从图中可得
-	% \[
-	% 	A_{合}=1.5A_0,I_{合}=2.25I_0	
-	% \]
+	\par 由波带片计算相应的半波带数目
+	\[
+		k_{i}=\dfrac{\rho_i^2(R+b)}{Rb}=2,1	
+	\]
+	\par 图中相当于一个完整$k\in[0,1]$半波带和$\dfrac{1}{4}$个$k\in[1,2]$半波带，绘制相应矢量振幅图如下，从图中可得
+	\[
+		A_{合}=1.5A_0,I_{合}=2.25I_0	
+	\]
 \end{example}
 
 \begin{figure}[!htp]
 	\centering
-	\subcaptionbox{例2.4题图}[4cm]
+	\subcaptionbox{例2.7 题图}[4cm]
 	{\includegraphics[width=4cm]{fig8.eps}}
-	% \hspace{1cm}
-	% \subcaptionbox{例2.4矢量分析图}[7cm]
-	% {\includegraphics[width=8cm]{fig11.eps}}
+	\hspace{1cm}
+	\subcaptionbox{例2.7 矢量分析图}[7cm]
+	{\includegraphics[width=8cm]{fig11.eps}}
 	\caption{半波带法的具体例子}
 \end{figure}
 
@@ -207,8 +207,6 @@
 倾角的增倾斜因子 $F \rightarrow 0$，于是图中半径 $R \rightarrow 0$，形成菲涅尔螺线。 可以发现 若将每个半圆用其直径来代替, 则退化成半波带法。
 
 
-使用\verb+siunitx+宏包可以方便地输入SI单位制单位，例如\verb+\SI{5}{\um}+可以得到\SI{5}{\um}。
-
 \subsection{多缝干涉和艾里斑}
 若光栅缝间距为 $d$, 则缝间相位差
 $$
@@ -225,7 +223,7 @@ A_{\varphi}=\left(\frac{\sin N \beta}{\sin \beta}\right) A_1 \Rightarrow I_{\var
 $$
 这正是光栅的缝间干涉因子。于是
 \begin{myprop}{ 光栅衍射因子}{}
-	在光栅衍射中，定义$\alpha=\dfrac{\pi a\sin \varphi}{\lambda},\beta=\dfrac{\pi d\sin \varphi}{\lambda}$，则振幅和光强分布如下
+	在光栅衍射中，定义$\alpha=\dfrac{\pi a\sin \varphi}{\lambda}，\beta=\dfrac{\pi d\sin \varphi}{\lambda}$，则振幅和光强分布如下
 	\[
 		A_{\varphi}=\left(\frac{\sin N \beta}{\sin \beta}\right)\left(\frac{\sin \alpha}{\alpha}\right) A_0 \Rightarrow I_{\varphi}=\left(\frac{\sin N \beta}{\sin \beta}\right)^2\left(\frac{\sin \alpha}{\alpha}\right)^2 I_0
 	\]
@@ -233,7 +231,7 @@ $$
 
 \begin{mydef}{光栅本领}{2}
 	\begin{itemize} 
-	\item $k$ 级主极大条件: $\beta_k=k \pi \Leftrightarrow d \sin \varphi_k=k \lambda\left(\right.$ (微分 : $\left.d \cos \varphi_k \delta \varphi_k=\delta(k \lambda)\right)$
+	\item $k$ 级主极大条件: $\beta_k=k \pi \Leftrightarrow d \sin \varphi_k=k \lambda\left(\right.$ 微分 : $\left.d \cos \varphi_k \delta \varphi_k=\delta(k \lambda)\right)$
 	\item $k$ 级主极大半角宽: $\Delta \beta_k=\dfrac{\pi}{N} \Leftrightarrow d \cos \varphi_k \Delta \varphi_k=\dfrac{\lambda}{N} \Leftrightarrow \Delta \varphi_k=\dfrac{\lambda}{N d \cos \varphi_k}$
 	\item  分辨本领 : $d \sin \left(\varphi_k \pm \Delta \varphi_k\right)=k(\lambda \pm \delta \lambda) \Leftrightarrow d \cos \varphi_k \Delta \varphi_k=k \delta \lambda=\dfrac{\lambda}{N} \Leftrightarrow R=\dfrac{\lambda}{\delta \lambda}=k$
 	\item  角色散本领 $: D_\theta \equiv \dfrac{\delta \varphi_k}{\delta \lambda}=\dfrac{k}{d \cos \theta_k}$
@@ -242,37 +240,35 @@ $$
 \end{mydef}
 
 \begin{example}
-	一个三狭缝衍射屏, 缝宽均为 $\boldsymbol{a}$, 彼此间距为 $\boldsymbol{d}$, 中间缝盖有可以引起 $180^{\circ}$ 相位改变的滤光片, 波长为 $\lambda$ 的单色光正人射, 计算下列各种情况下 的衍射角:
-	\par (1) 第一衍射极小;
-	\par (2) 第一干涉极小;
-	\par (3) 第一干涉极大。
+	一个三狭缝衍射屏，缝宽均为 $\boldsymbol{a}$，彼此间距为 $\boldsymbol{d}$，中间缝盖有可以引起 $180^{\circ}$ 相位改变的滤光片，波长为 $\lambda$ 的单色光正人射，计算下列各种情况下 的衍射角：
+	\par (1) 第一衍射极小;\quad  (2) 第一干涉极小;\quad  (3) 第一干涉极大。
 	\soln
 
+	% \[
+	% 	\\
+	% \]
+	% \[
+	% 	\\
+	% \]
+	% \[
+	% 	\\
+	% \]
+	\par (1)定义$\alpha=\dfrac{\pi a\sin \theta}{\lambda}$，则单缝衍射因子为$\left(\dfrac{\sin \alpha}{\alpha}\right)^2$，则第一衍射极小对应的角度$\alpha=\pi$，解得
 	\[
-		\\
+		\dfrac{\pi a\sin \theta_1}{\lambda}=\pi\Longrightarrow \theta_{1}=\dfrac{\lambda}{a}	
 	\]
+	\par (2)由于对称性，将中心缝作为基准，则定义$\delta=\dfrac{\textcolor{blue}{2}\pi d\sin \theta}{\lambda}$为相邻两束光干涉的相位差，其振幅合成大小为
 	\[
-		\\
+		A_{合}=A_{0}(2\cos \delta-1)	
 	\]
+	\par 当$A=0$时，绝对值最小的解为$\delta=\pm \dfrac{\pi}{3}$，则
 	\[
-		\\
+		\dfrac{\textcolor{blue}{2}\pi d \sin \theta_2}{\lambda}=\dfrac{\pi}{3}\Longrightarrow\theta_2=\dfrac{\lambda}{6d}
 	\]
-	% \par (1)定义$\alpha=\dfrac{\pi a\sin \theta}{\lambda}$，则单缝衍射因子为$\left(\dfrac{\sin \alpha}{\alpha}\right)^2$，则第一衍射极小对应的角度$\alpha=\pi$，解得
-	% \[
-	% 	\dfrac{\pi a\sin \theta_1}{\lambda}=\pi\Longrightarrow \theta_{1}=\dfrac{\lambda}{a}	
-	% \]
-	% \par (2)由于对称性，将中心缝作为基准，则定义$\delta=\dfrac{\textcolor{blue}{2}\pi d\sin \theta}{\lambda}$为相邻两束光干涉的相位差，其振幅合成大小为
-	% \[
-	% 	A_{合}=A_{0}(2\cos \delta-1)	
-	% \]
-	% \par 当$A=0$时，绝对值最小的解为$\delta=\pm \dfrac{\pi}{3}$，则
-	% \[
-	% 	\dfrac{\textcolor{blue}{2}\pi d \sin \theta_2}{\lambda}=\dfrac{\pi}{3}\Longrightarrow\theta_2=\dfrac{\lambda}{6d}
-	% \]
-	% \par (3)干涉极大对应$|2\cos \delta -1|$极大，此时$\delta=\pm \pi$，则
-	% \[
-	% 	\dfrac{\textcolor{blue}{2}\pi d \sin \theta_3}{\lambda}=\pi\Longrightarrow\theta_3=\dfrac{\lambda}{2d}	
-	% \]
+	\par (3)干涉极大对应$|2\cos \delta -1|$极大，此时$\delta=\pm \pi$，则
+	\[
+		\dfrac{\textcolor{blue}{2}\pi d \sin \theta_3}{\lambda}=\pi\Longrightarrow\theta_3=\dfrac{\lambda}{2d}	
+	\]
 \end{example}
 
 % \begin{figure}[!htp]
@@ -302,9 +298,6 @@ $$
 \section{偏振}
 
 \subsection{菲涅尔反射折射公式}
-
-斯托克斯公式、两个光路图推导
-公式定性推导、半波损失、全反射、隐失波的解释
 
 \begin{myprop}{斯托克斯倒逆关系}{1}
 如下图所示，设光从介质A传播到介质B的反射系数和透射系数分别为$r,t$，从介质B到介质A的反射系数和透射为$r^{\prime},t^{\prime}$，以下关系式成立（四个系数均为复数）
@@ -352,26 +345,25 @@ $$
 \end{myprop}
 
 \begin{remark}
-	《光学》教材对于全反射情况下相位变化公式推导缺少负号（见下），本质上是求复数幅角$\arg\dfrac{A-Bi}{A+Bi}=-2\arctan\left(\dfrac{B}{A}\right)$
+	《光学》教材对于全反射情况相位变化公式推导主要是求复数幅角$\arg\dfrac{A-Bi}{A+Bi}=-2\arctan\left(\dfrac{B}{A}\right)$
 	\[
-	\begin{array}{l}\delta_{\mathrm{p}}=\textcolor{blue}{-}2 \arctan \dfrac{n_1}{n_2} \dfrac{\sqrt{\left(\dfrac{n_1}{n_2}\right)^2 \sin ^2 i_1-1}}{\cos i_1}, \delta_{\mathrm{s}}=\textcolor{blue}{-}2 \arctan \dfrac{n_2}{n_1} \dfrac{\sqrt{\left(\dfrac{n_1}{n_2}\right)^2 \sin ^2 i_1-1}}{\cos i_1} .\end{array}
+	\begin{array}{l}|\delta_{\mathrm{p}}|=2 \arctan \dfrac{n_1}{n_2} \dfrac{\sqrt{\left(\dfrac{n_1}{n_2}\right)^2 \sin ^2 i_1-1}}{\cos i_1}, |\delta_{\mathrm{s}}|=2 \arctan \dfrac{n_2}{n_1} \dfrac{\sqrt{\left(\dfrac{n_1}{n_2}\right)^2 \sin ^2 i_1-1}}{\cos i_1} .\end{array}
 	\]
 \end{remark}
 
 \begin{example}
 	$s$光以$\theta$角从折射率$n_1$介质入射厚度为$d$、折射率为$n_2$的玻璃平板后回到$n_1$介质（$n_2>n_1$），求以下两种情况的能量透射率：
-	\par (1)\ $d$很小，相邻出射光束间仍有相干性；
-	\par (2)\ $d$很大，相邻出射光束间无相干性。（提示：类比法布里-珀罗干涉仪）
+	\par (1)\ $d$很小，相邻出射光束间仍有相干性；（提示：类比法布里-珀罗干涉仪）
+	\par (2)\ $d$很大，相邻出射光束间无相干性。
 	\soln
 
+	\par (1) 由法布里-珀罗干涉仪相关公式得
 	\[
-		\\
+		T=\dfrac{1}{1+\dfrac{(1-R)^2}{4R\sin ^2\left(\dfrac{2\pi d}{\lambda}\sqrt{n_2^2-n_1^2\sin ^2\theta}\right)}}
 	\]
+	\par (2) 此时\textbf{满足时间相干性}，等比数列求和得到
 	\[
-		\\
-	\]
-	\[
-		\\
+		T=\dfrac{1-R}{1+R}	
 	\]
 \end{example}
 
@@ -391,14 +383,14 @@ $$
 	\par \ (2)入射光平行法线，光轴与法线夹角为$\varphi$。
 	\soln
 
+
+	\par (1)
 	\[
-		\\
+		r=\arctan \left(\dfrac{n_O}{n_E\sqrt{n_E^2-\sin ^2 i}}\right),\theta=\arctan \left(\dfrac{n_E}{n_O\sqrt{n_{E}^2-\sin ^2 i}}\right)
 	\]
+	\par (2)
 	\[
-		\\
-	\]
-	\[
-		\\
+		r=\arctan \left(\dfrac{n_{O}^2}{n_{E}^2}\tan \varphi\right)-\varphi,\theta=0
 	\]
 \end{example}
 \begin{myprop}{ 双折射应用}{1}
@@ -432,7 +424,7 @@ $$
 				A_y^{\prime}
 				\end{array}\right]=\left[\begin{array}{cc}
 				1 & 0 \\
-				0 & e^{-i \Delta}
+				0 & e^{i \Delta}
 				\end{array}\right]\left[\begin{array}{l}
 				A_x \\
 				A_y
@@ -460,10 +452,31 @@ $$
 	\soln
 
 	\[
-		\\
-	\]
-	\[
-		\\
+	\begin{gathered}
+		{\left[\begin{array}{c}
+		A_x{ }^{\prime} \\
+		A_y^{\prime}
+		\end{array}\right]=\frac{1}{2} e^{-\frac{\Delta \Delta}{2}}\left[\begin{array}{l}
+		1 \\
+		i
+		\end{array}\right]+\frac{1}{2} e^{\frac{\Delta \Delta}{2}}\left[\begin{array}{c}
+		1 \\
+		-i
+		\end{array}\right]=\left[\begin{array}{c}
+		\cos \dfrac{\Delta}{2} \\
+		-\sin \dfrac{\Delta}{2}
+		\end{array}\right]} \\
+		\left[\begin{array}{l}
+			A_x^{\prime} \\
+			A_y^{\prime}
+			\end{array}\right]=\left[\begin{array}{cc}
+			\cos \dfrac{\Delta}{2} & \sin \frac{\Delta}{2} \\
+			-\sin \dfrac{\Delta}{2} & \cos \frac{\Delta}{2}
+			\end{array}\right]\left[\begin{array}{l}
+			A_x \\
+			A_y
+		\end{array}\right]
+	\end{gathered}
 	\]
 \end{example}
 
@@ -488,14 +501,17 @@ $$
 	\par \ (3)若一束波长为$\lambda$的黄光脉冲入射到与三棱镜材质相同的玻璃片上，玻璃片厚度为$d$，求黄光脉冲通过改玻璃片所需要的时间$t$。
 	\soln
 
+	\par (1) 由性质 1.1 得到
 	\[
-		\\
+		\varphi_{\min}=2\arcsin \left(n\sin \left(\dfrac{\alpha}{2}\right)\right)-\alpha	
 	\]
+	\par (2) 对第(1)问求导，左侧为$\delta$，取$\Delta \lambda$为波长变化量可得
 	\[
-		\\
-	\]
+		\dfrac{\mathrm{d}n}{\mathrm{d}\lambda}=\dfrac{\delta \sqrt{1-n^2\sin ^2\left(\dfrac{\alpha}{2}\right)}}{2\sin \left(\dfrac{\alpha }{2}\right)\Delta \lambda}
+	\]	
+	\par (3) 由性质 2.26 代入色散率解得群速度，时间$t=\dfrac{d}{v_{\text{g}}}$
 	\[
-		\\
+		t=\dfrac{d}{n-\dfrac{\sqrt{1-n^2\sin ^2\left(\dfrac{\alpha}{2}\right)}}{2\sin \left(\dfrac{\alpha }{2}\right)}\dfrac{\lambda \delta}{\Delta \lambda}}	
 	\]
 \end{example}
 \subsection{柯西公式}
